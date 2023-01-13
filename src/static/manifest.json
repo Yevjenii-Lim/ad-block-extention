@@ -1,28 +1,21 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Ad block extention",
-  "description": "Ad block  from Udemy Course",
+  "description": "Ad block from Udemy Course",
   "version": "1.0",
   "icons": {
-    "16": "weather.png",
-    "46": "weather.png",
-    "128": "weather.png"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "Weather Extention",
-    "default_icon": "weather.png"
+    "16": "ad.png",
+    "46": "ad.png",
+    "128": "ad.png"
   },
   "permissions": [
-    "storage",
-    "alarms",
-    "notifications",
-    "contextMenus",
-    "search",
-    "tabs",
-    "tts"
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "*://*.googleadservices.com/*",
+    "*://canyoublockit.com/*",
+    "*://*.tpc.googlesyndication.com/*"
   ],
-  "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
   },
